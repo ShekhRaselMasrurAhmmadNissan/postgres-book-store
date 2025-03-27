@@ -65,3 +65,9 @@ SELECT * FROM orders;
 -- Find the books that are out of stock
 */
 SELECT title FROM books WHERE stock = 0;
+
+/*
+-- Problems and Solution: 2
+-- Retrieve the most expensive book of the store
+*/
+SELECT * FROM books ORDER BY price DESC LIMIT 1;
