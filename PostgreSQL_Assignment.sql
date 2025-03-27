@@ -100,3 +100,9 @@ GROUP BY c.name HAVING COUNT(o.id) > 1;
 -- Find the average price of books in the store
 */
 SELECT ROUND(AVG(price), 2) AS average_price FROM books;
+
+/*
+-- Problems and Solution: 7
+-- Increase the price of all books published before 2000 by 10%
+*/
+UPDATE books SET price = price + (price * 0.1) WHERE published_year < '2000';
