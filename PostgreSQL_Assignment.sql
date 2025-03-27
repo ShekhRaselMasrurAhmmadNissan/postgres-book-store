@@ -79,3 +79,10 @@ SELECT * FROM books ORDER BY price DESC LIMIT 1;
 SELECT c.name, COUNT(o.id) AS total_orders FROM customers c
 LEFT JOIN orders o ON c.id = o.customer_id
 GROUP BY c.name HAVING COUNT(o.id) > 0;
+
+/*
+-- Problems and Solution: 4
+-- Calculate the total revenue generated from book sales.
+*/
+SELECT SUM(price * quantity) AS total_revenue FROM orders o
+JOIN books b ON o.book_id = b.id;
