@@ -24,3 +24,13 @@ CREATE TABLE customers(
 	joined_date DATE DEFAULT now()
 )
 
+-- Create Orders Table
+CREATE TABLE orders(
+	id SERIAL PRIMARY KEY,
+	customer_id INT REFERENCES customers(id),
+	book_id INT REFERENCES books(id),
+	quantity INT,
+	CHECK (quantity > 0),
+	order_date DATE DEFAULT now()
+)
+
