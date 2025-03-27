@@ -55,10 +55,15 @@ INSERT INTO orders (customer_id, book_id, quantity, order_date) VALUES
 	(2, 1, 1, '2024-02-20'),
 	(1, 3, 2, '2024-03-05');
 
--- Retrieve all data
-SELECT * FROM books;
-SELECT * FROM customers;
-SELECT * FROM orders;
+-- ? Retrieve all data
+-- SELECT * FROM books;
+-- SELECT * FROM customers;
+-- SELECT * FROM orders;
+
+-- ! DROP ALL THE TABLES
+-- DROP TABLE orders;
+-- DROP TABLE customers;
+-- DROP TABLE books;
 
 /*
 -- Problems and Solution: 1
