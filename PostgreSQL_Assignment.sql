@@ -71,3 +71,11 @@ SELECT title FROM books WHERE stock = 0;
 -- Retrieve the most expensive book of the store
 */
 SELECT * FROM books ORDER BY price DESC LIMIT 1;
+
+/*
+-- Problems and Solution: 3
+-- Find the total number of orders placed by each customer
+*/
+SELECT c.name, COUNT(o.id) AS total_orders FROM customers c
+LEFT JOIN orders o ON c.id = o.customer_id
+GROUP BY c.name HAVING COUNT(o.id) > 0;
