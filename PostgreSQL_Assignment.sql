@@ -94,3 +94,9 @@ JOIN books b ON o.book_id = b.id;
 SELECT c.name, COUNT(o.id) AS orders_count FROM customers c
 LEFT JOIN orders o ON c.id = o.customer_id
 GROUP BY c.name HAVING COUNT(o.id) > 1;
+
+/*
+-- Problems and Solution: 6
+-- Find the average price of books in the store
+*/
+SELECT ROUND(AVG(price), 2) AS average_price FROM books;
