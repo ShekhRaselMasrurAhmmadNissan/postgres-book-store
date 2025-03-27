@@ -16,4 +16,11 @@ CREATE TABLE books(
 	published_year CHAR(4)
 )
 
+-- Create Customers Table
+CREATE TABLE customers(
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(50),
+	email VARCHAR(50),
+	joined_date DATE DEFAULT now()
+)
 
