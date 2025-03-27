@@ -9,7 +9,7 @@ CREATE TABLE books(
 	id SERIAL PRIMARY KEY,
 	title VARCHAR(50),
 	author VARCHAR(50),
-	price INT,
+	price DECIMAL(10,2),
 	CHECK (price > 0),
 	stock INT,
 	CHECK (stock >= 0),
@@ -59,3 +59,9 @@ INSERT INTO orders (customer_id, book_id, quantity, order_date) VALUES
 SELECT * FROM books;
 SELECT * FROM customers;
 SELECT * FROM orders;
+
+/*
+-- Problems and Solution: 1
+-- Find the books that are out of stock
+*/
+SELECT title FROM books WHERE stock = 0;
