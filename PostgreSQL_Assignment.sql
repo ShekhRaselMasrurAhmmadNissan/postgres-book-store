@@ -106,3 +106,9 @@ SELECT ROUND(AVG(price), 2) AS average_price FROM books;
 -- Increase the price of all books published before 2000 by 10%
 */
 UPDATE books SET price = price + (price * 0.1) WHERE published_year < '2000';
+
+/*
+-- Problems and Solution: 8
+-- Delete customers who have not placed any orders
+*/
+DELETE FROM customers WHERE id NOT IN (SELECT DISTINCT customer_id FROM orders);
